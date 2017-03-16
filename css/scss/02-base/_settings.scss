@@ -8,17 +8,50 @@ body {
 
 body {
   font-family: 'Proxima Nova';
+  font-weight: 300;
+  font-size: 16px;
+  padding-top: 90px;
 }
-
+h1 {
+  font: 48px 'Gothic Regular';
+}
+h2 {
+  font: 36px 'Gothic Regular';
+  margin-bottom: 25px;
+  color: #FFF;
+  &:after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 2px;
+    background: $accent;
+    margin: 25px auto 0;
+  }
+}
 // lAYOUT
 // ---------------------------
 .wrapper {
-	width: 1200px;
+	width: 940px;
 	margin: 0 auto;
 	text-align: center;
 }
 
+.section {
+  padding: 60px 0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
 
+.dark {
+  background: $text;
+  color: #FFF;
+}
+.dark-text {
+  color: $text;
+}
 .flex-row {
     @include flex($alignI: flex-start, $justify: flex-start);
     margin: 0 -15px;

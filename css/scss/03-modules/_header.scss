@@ -1,18 +1,25 @@
          
 .mainHeader {
-    @include position(absolute, 0, 0, auto, 0);
+    @include position(fixed, 0, 0, auto, 0);
+    left: 0;
+    top: 0;
+    z-index: 100;
     @include transition(all, .4s);
-    height: 100px;
-    
-    background: #2C3840;
-    
+    height: 90px;
+    box-shadow: 0px 1px 5px 0px rgba(38, 47, 49, 0.5);
+    background: $text;
     .wrapper {
         height: 100%;
         @include flex();
+        width: 100%;
+        padding: 0 12%;
     }
 
     &__info {
         color: #fff;
+    }
+    .social {
+        margin-right: 40px;
     }
 }
 
@@ -25,9 +32,15 @@
         li {
             display: inline-block;
             vertical-align: middle;
-            margin: 0 10px;
+            margin: 0 30px;
             a {
                 color: #fff;
+                font-size: 18px;
+                font-weight: 400;
+                @include transition(all,.2s);
+                &:hover {
+                    color: $accent;
+                }
             }
         }
     }
@@ -36,11 +49,17 @@
 .social {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 20px;
     a {
         color: #fff;
         font-size: 18px;
         font-weight: 100;
+        margin: 0 8px;
+        display: inline-block;
+        vertical-align: middle;
+        @include transition(all,.2s);
+                &:hover {
+                    color: $accent;
+                }
     }
 }
 
@@ -51,6 +70,31 @@
     color: #fff;
 }
 
+
+.toggle-sites {
+    border: none;
+    background: none;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    margin-right: 45px;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    left: 4%;
+    @media (max-width: 700px) {
+        margin-right: 10px;
+    }
+    @media (max-width: 600px) {
+        font-size: 16px;
+        margin-right: 6px;
+    }
+    @include transition(all,.2s);
+                &:hover {
+                    color: $accent;
+                }
+}
 
 /* ------------------------------------ */
 /*  MENU BUTTON  */

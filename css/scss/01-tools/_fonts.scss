@@ -32,3 +32,14 @@
     font-weight: 600;
     font-style: normal;
 }
+
+
+@font-face {
+    font-family: 'Gothic Regular';
+    src: url('../fonts/GothicRegular.eot');
+    src: url('../fonts/GothicRegular.eot') format('embedded-opentype'),
+         url('../fonts/GothicRegular.woff2') format('woff2'),
+         url('../fonts/GothicRegular.woff') format('woff'),
+         url('../fonts/GothicRegular.ttf') format('truetype'),
+         url('../fonts/GothicRegular.svg#GothicRegular') format('svg');
+}
