@@ -33,10 +33,10 @@
 
                 <nav class="mainNav"><!-- start navigation -->
                     <ul>
-                        <li><a href="index.html">About us</a></li>
-                        <li><a href="about.html">Expertise</a></li>
-                        <li><a href="blog.html">Services</a></li>
-                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#expertise">Expertise</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
                     </ul>
                 </nav><!-- end nav -->
 
@@ -49,7 +49,7 @@
                     </div>
                 </div><!-- end mainHeader__info -->
 
-                <button class="button">Send request</button>
+                <button href="#modal-popup" class="button magnific">Send request</button>
 
             </div><!-- end wrapper -->
         </header><!-- end header -->
@@ -68,11 +68,11 @@
                 <h1>Brick Connexion Technical Services</h1>
                 <p>Leading edge software applications, workface planning, scheduling, and problem processes</p>
             </div><!-- end wrapper -->
-            <a class="scroll-down anchor" href="#anchor"><span>Scroll down</span><i></i></a>
+            <a class="scroll-down anchor" href="#about"><span>Scroll down</span><i></i></a>
         </section><!-- end offer section --> 
 
 
-        <section class="section dark" id="anchor">
+        <section class="section dark" id="about">
             <div class="wrapper">
                 <h2>About us</h2>
                 <div class="flex-row flex-row-middle about-us">
@@ -87,7 +87,7 @@
             </div>
         </section>
 
-        <section class="section" style="background-image: url(images/expertice.jpg);">
+        <section class="section" style="background-image: url(images/expertice.jpg);" id="expertise">
             <div class="wrapper">
                 <h2>Our Expertise</h2>
                 <div class="flex-row expertise-list">
@@ -150,7 +150,7 @@
             </div>
         </section>
 
-        <section class="section dark services">
+        <section class="section dark services" id="services">
             <div class="wrapper">
                 <h2>Our services</h2>
                 <div class="services-list">
@@ -219,7 +219,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="contacts">
             <div class="wrapper">
                 <h2 class="dark-text">Contacts</h2>
 
@@ -289,7 +289,15 @@
             </div>
         </div>
 
-        <div id="modal-popup" class="mfp-hide zoom-anim-dialog popup"></div>
+        <div id="modal-popup" class="mfp-hide zoom-anim-dialog popup popup--form">
+            <form class="flex-row form">
+                <input type="text" name="name" placeholder="Enter your name">
+                <input type="text" name="name" placeholder="Enter your email">
+                <input type="text" name="name" placeholder="Enter your phone">
+                <textarea name="textarea" placeholder="Enter your message" id="" cols="30" rows="10"></textarea>
+                <button class="button">Send</button>
+            </form>
+        </div>
 
         <div id="modal-popup-ok" class="mfp-hide zoom-anim-dialog popup result">
             <p class="heading">Спасибо!</p>
