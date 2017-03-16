@@ -11,6 +11,9 @@ body {
   font-weight: 300;
   font-size: 16px;
   padding-top: 90px;
+  @media(max-width: 1500px) {
+    padding-top: 70px;
+  }
 }
 h1 {
   font: 48px 'Gothic Regular';
@@ -46,7 +49,7 @@ h2 {
 }
 
 .dark {
-  background: $text;
+  background: #0e1116;
   color: #FFF;
 }
 .dark-text {
