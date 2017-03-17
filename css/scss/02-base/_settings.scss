@@ -14,9 +14,18 @@ body {
   @media(max-width: 1500px) {
     padding-top: 70px;
   }
+  @media(max-width: 600px) {
+    font-size: 15px;
+  }
 }
 h1 {
   font: 48px 'Gothic Regular';
+  @media(max-width: 600px) {
+    font-size: 38px;
+  }
+  @media(max-width: 400px) {
+    font-size: 32px;
+  }
 }
 h2 {
   font: 36px 'Gothic Regular';
@@ -30,6 +39,16 @@ h2 {
     background: $accent;
     margin: 25px auto 0;
   }
+  @media(max-width: 600px) {
+    font-size: 32px;
+  }
+  @media(max-width: 400px) {
+    font-size: 28px;
+    margin-bottom: 20px;
+    &:after {
+      margin-top: 20px;
+    }
+  }
 }
 // lAYOUT
 // ---------------------------
@@ -37,6 +56,10 @@ h2 {
 	width: 940px;
 	margin: 0 auto;
 	text-align: center;
+  @media(max-width: 1000px) {
+    width: 100%;
+    padding: 0 15px;
+  }
 }
 
 .section {
@@ -46,6 +69,9 @@ h2 {
   -webkit-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
+  @media(max-width: 760px) {
+    padding: 40px 0;
+  }
 }
 
 .dark {

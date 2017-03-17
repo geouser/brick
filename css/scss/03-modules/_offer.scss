@@ -10,12 +10,21 @@
          -o-background-size: cover;
             background-size: cover;
     
+    @media(max-width: 760px) {
+        height: 500px;
+    }
     h1 {
         margin-bottom: 20px;
         color: #FFF;
         & + p {
             font-size: 21px;
             color: #FFF;
+            @media(max-width: 600px) {
+                font-size: 18px;
+            }
+            @media(max-width: 400px) {
+                font-size: 16px;
+            }
         }
     }
 }
@@ -136,14 +145,41 @@
         &:last-of-type {
             margin-bottom: 0;
         }
+        @media(max-width: 760px) {
+            padding-right: 0;
+        }
+    }
+    img {
+        max-width: 100%;
+    }
+    @media(max-width: 760px) {
+        display: block;
+        .col-6 {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
 .expertise-list {
     -webkit-align-items: stretch;
             align-items: stretch;
+    @media(max-width: 760px) {
+        -webkit-justify-content: center;
+                justify-content: center;
+    }
     .col-4 {
         padding: 9px;
+        @media(max-width: 760px) {
+            width: 280px;
+            margin: 10px;
+            padding: 0;
+        }
     }
 }
 .expertise {
@@ -152,6 +188,9 @@
     height: 100%;
     padding: 30px 25px;
     text-align: center;
+    @media(max-width: 800px) {
+        padding: 25px 15px;
+    }
     .expertise__img {
         display: block;
         margin: 0 auto 20px;
@@ -191,10 +230,23 @@
     -webkit-background-size: 35% auto, 30% auto;
          -o-background-size: 35% auto, 30% auto;
             background-size: 35% auto, 30% auto;
+    @media(max-width: 700px) {
+        -webkit-background-size: 85% auto, 70% auto;
+         -o-background-size: 85% auto, 70% auto;
+            background-size: 85% auto, 70% auto;
+    }
 }
 
 .services-list {
     @include flex($alignI: stretch);
+    @media(max-width: 900px) {
+        -webkit-justify-content: center;
+                justify-content: center;
+    }
+    @media(max-width: 500px) {
+        -webkit-align-items: flex-start;
+                align-items: flex-start;
+    }
 }
 .service {
     color: #fff;
@@ -202,6 +254,11 @@
     padding: 20px 5px;
     text-align: center;
     width: 20%;
+    @media(max-width: 900px) {
+        width: 180px;
+        margin: 10px;
+        padding: 0px 5px;
+    }
     .service__img {
         display: block;
         margin: 0 auto 20px;
@@ -226,6 +283,9 @@
         text-align: center;
         font-size: 18px;
         font-weight: 600;
+        @media(max-width: 900px) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -235,8 +295,19 @@
     text-align: left;
     color: $text;
     margin-bottom: 65px;
+    @media(max-width: 700px) {
+        font-size: 16px;
+    }
+    @media(max-width: 700px) {
+        .col-6 {
+            width: 100%;
+        }
+    }
     .col-6:first-of-type {
         padding-right: 20px;
+        @media(max-width: 700px) {
+            padding-right: 15px;
+        }
     }
     .address {
         display: block;
@@ -247,6 +318,9 @@
         margin-bottom: 35px;
         font-weight: 400;
         color: #262F31;
+        @media(max-width: 600px) {
+            padding-left: 50px;
+        }
         &:before {
             display: block;
             position: absolute;
@@ -269,6 +343,9 @@
         display: block;
         font-weight: 400;
         color: #262F31;
+        @media(max-width: 600px) {
+            padding-left: 50px;
+        }
         &:before {
             display: block;
             position: absolute;
@@ -295,6 +372,9 @@
         display: block;
         font-weight: 400;
         color: #262F31;
+        @media(max-width: 600px) {
+            padding-left: 50px;
+        }
         &:before {
             display: block;
             position: absolute;
@@ -319,8 +399,20 @@
 }
 
 .form {
+    @media(max-width: 700px) {
+        .col-6 {
+            width: 100%;
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
     .col-6:first-of-type {
         padding-right: 20px;
+        @media(max-width: 700px) {
+            padding-right: 15px;
+        }
     }
     input,
     textarea {
@@ -337,14 +429,28 @@
     textarea {
         height: 160px;
         padding-top: 10px;
+        width: 100%;
     }
     .button {
         margin-top: 20px;
+        @media(max-width: 700px) {
+            margin-top: 0;
+        }
     }
 }
 
 .footer {
     height: 130px;
+    @media(max-width: 700px) {
+        font-size: 14px;
+        .col-3,
+        .col-6 {
+            padding: 0 5px;
+        }
+    }
+    @media(max-width: 600px) {
+        font-size: 12px;
+    }
     @media(max-width: 1500px) {
         height: 100px;
     }
@@ -367,6 +473,9 @@
             &:hover {
                 color: $accent;
             }
+            @media(max-width: 600px) {
+                display: block;
+            }
         }
     }
 }
@@ -376,6 +485,7 @@
     width: 400px;
     padding: 50px 40px 35px;
     margin: 0 auto;
+    max-width: 100%;
     .button {
         margin-top: 0;
         margin: 0 auto;
@@ -385,5 +495,8 @@
         border: 1px solid #fff;
         color: #FFF;
         background: transparent;
+        @media(max-width: 500px) {
+            font-size: 14px;
+        }
     }
 }
